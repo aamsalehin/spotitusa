@@ -453,7 +453,14 @@ a {
 /*********************
     4.Services
 **********************/
-
+.services-box{
+  transition: all .5s ease-in-out;
+  padding: 50px 30px !important;
+}
+.services-box:hover{
+  box-shadow: 0px 0px 10px rgb(158, 158, 158);
+  transform: scale(1.05);
+}
 .services-box h4 {
   font-size: 18px;
 }
@@ -1074,6 +1081,19 @@ ol {
 }
 .page-subtitle{
   color: rgb(211, 208, 208);
+}
+
+/* modal button */
+.modal-button{
+  color: white;
+  background-color: orange;
+  padding: 10px 20px;
+  transition: all .5s ease-in-out;
+}
+.modal-button:hover{
+  background-color: orange;
+  transition: all .5s ease-in-out;
+  color: white;
 }
 
 
