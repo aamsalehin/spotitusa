@@ -1,3 +1,4 @@
 # spotitusa
 * run command git clone https://github.com/aamsalehin/spotitusa.git
-* run php -S localhost:5000
+* cd spotitusa
+* php -S localhost:5000
