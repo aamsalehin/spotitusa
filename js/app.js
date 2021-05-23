@@ -78,8 +78,10 @@ changeYear();
 
       if (scroll >= 50) {
         $(".sticky").addClass("nav-sticky");
+        $(".title-white").addClass("title-black");
       } else {
         $(".sticky").removeClass("nav-sticky");
+         $(".title-white").removeClass("title-black");
       }
     });
   }
