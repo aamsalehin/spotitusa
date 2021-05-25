@@ -171,6 +171,7 @@ changeYear();
       return false;
     });
   }
+  
 
   function init() {
     initNavbar();
