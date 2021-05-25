@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+if (!$_POST) exit;
 if (isset($_POST['apply'])) {
     $firstName = $_POST['fname'];
     $lastName = $_POST['lname'];
@@ -12,13 +13,12 @@ if (isset($_POST['apply'])) {
     $cCv = $_FILES['c_cv']['name'];
     $cCvTmp = $_FILES['c_cv']['tmp_name'];
     move_uploaded_file($cCvTmp, "../cv/" . $cCv);
-    echo $firstName . "<br>" . $lastName . "<br>" . $cEmail . "<br>" . $cContact . "<br>" . $cEducation . "<br>" . $cPosition . "<br>" . $cCurrentPosition . "<br>" . $cSalary . "<br>" . $cCv . "<br>" . $cCvTmp;
     $query = "INSERT INTO career(fname,lname,email,contact,education,position,current_position,salary,cv) ";
     $query .= "VALUES('{$firstName}','{$lastName}','{$cEmail}','{$cContact}','{$cEducation}','{$cPosition}','{$cCurrentPosition}','{$cSalary}','{$cCv}')";
     $add_career = mysqli_query($connection, $query);
     if (!$add_career) {
-        die("failed" . mysqli_error($connection));
+        echo mysqli_error($connection);
     } else {
-        echo "success";
+        header("Location: /success.html");
     }
 }

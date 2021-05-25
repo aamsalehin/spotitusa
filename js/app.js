@@ -1,4 +1,3 @@
-
 //custom animation
 function slideAppear() {
   var section = document.querySelectorAll(".slideInTop");
@@ -12,10 +11,10 @@ function slideAppear() {
 }
 window.addEventListener("scroll", slideAppear);
 
-function changeYear(){
+function changeYear() {
   const yearSpan = document.querySelector(".year");
   const year = new Date().getFullYear();
-  yearSpan.textContent=year;
+  yearSpan.textContent = year;
 }
 changeYear();
 
@@ -81,7 +80,7 @@ changeYear();
         $(".title-white").addClass("title-black");
       } else {
         $(".sticky").removeClass("nav-sticky");
-         $(".title-white").removeClass("title-black");
+        $(".title-white").removeClass("title-black");
       }
     });
   }
@@ -171,7 +170,6 @@ changeYear();
       return false;
     });
   }
-  
 
   function init() {
     initNavbar();

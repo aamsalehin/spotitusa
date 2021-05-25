@@ -120,7 +120,8 @@
     <section class="section">
       <div class="container">
         <div class="row">
-          <form action="php/career.php" method="POST" enctype="multipart/form-data">
+          <div id="career-message"></div>
+          <form id="career-form" action="php/career.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-lg-6">
               <div class="form-group mb-3">
@@ -209,7 +210,7 @@
                 placeholder="upload your cv here..."
               />
             </div>
-            <button class="btn btn-custom" type="submit" name="apply">Apply Now</button>
+            <button id="apply" class="btn btn-custom" type="submit" name="apply">Apply Now</button>
           </form>
         </div>
       </div>
